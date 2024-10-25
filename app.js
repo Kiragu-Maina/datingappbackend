@@ -12,13 +12,14 @@ var requestRouter = require('./routes/request');
 var app = express();
 
 app.options('*', function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "https://www.alkena.live");
-    res.header("Access-Control-Allow-Credentials", "true");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With, content-type, credentials");
-    res.header("Access-Control-Allow-Methods", "GET, POST");
-    res.status(200);
-    next();
+  res.header("Access-Control-Allow-Origin", "https://www.alkena.live");
+  res.header("Access-Control-Allow-Credentials", "true");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type, credentials");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.status(200).end();
 });
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
