@@ -16,7 +16,7 @@ async function getUserData(access_token) {
 router.get('/', async function(req, res, next){
     const code = req.query.code;
     try{
-        const redirectUrl = 'http://127.0.0.1:3000/oauth';
+        const redirectUrl = 'https://datingappbackend-kiragu-maina9939-unzvrf2a.leapcell.dev/oauth';
         const oAuth2Client = new OAuth2Client(
             process.env.GOOGLE_CLIENT_ID,
             process.env.GOOGLE_CLIENT_SECRET,
