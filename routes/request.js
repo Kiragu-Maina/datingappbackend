@@ -5,9 +5,9 @@ dotenv.config();
 const {OAuth2Client} = require('google-auth-library');
 
 
-router.post('/', async function(req, res, next){
-    res.header('Access-Control-Allow-Origin', 'https://alkena.live');
-    res.header('Referrer-Policy','no-referrer-when-downgrade')
+router.get('/', async function(req, res, next){
+   
+
 
     const redirectUrl = 'https://datingappbackend-kiragu-maina9939-unzvrf2a.leapcell.dev/oauth';
 
